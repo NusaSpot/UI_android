@@ -3,7 +3,11 @@
 
     <color name="colorPrimary">#59A14F</color>
     <color name="colorPrimaryDark">#59A14F</color>
+    <color name="colorSecondary">#89D900</color>
+    <color name="colorResep">#89D900</color>
+    <color name="colorquestion">#C6F96F</color>
     <color name="colorAccent">#00A5FF</color>
+    <color name="ahligizi">#99D2EBE7</color>
 
     <!--colors for modern UI-->
     <color name="whiteTextColor">#FFF</color>

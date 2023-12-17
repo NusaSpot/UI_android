@@ -19,15 +19,15 @@ class LoginActivity : AppCompatActivity() {
         val otp : TextView = findViewById(R.id.cirLoginButton)
 
         tv_register.setOnClickListener {
-            val intent = Intent(this, ListImageActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
         reset_page.setOnClickListener {
-            val intent = Intent(this, UploadActivity::class.java)
+            val intent = Intent(this, AhliGiziActivity::class.java)
             startActivity(intent)
         }
         otp.setOnClickListener {
-            val intent = Intent(this,ProfileDetailActivity::class.java)
+            val intent = Intent(this,LoadingQuestionActivity::class.java)
             startActivity(intent)
         }
     }

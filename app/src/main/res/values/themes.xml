@@ -36,6 +36,12 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+    </style>
+
+
     <style name="loginCard" parent="parent" />
 
     <style name="linearParent" parent="parent">
