@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthyActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/welcomeCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_border">
+
+
+            <TextView
+                android:id="@+id/quotes"
+                android:layout_width="159dp"
+                android:layout_height="102dp"
+                android:layout_below="@id/Nama"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:includeFontPadding="false"
+                android:padding="8dp"
+                android:text="@string/quotes"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:text="Nusa"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/umur"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/Nama"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:padding="6dp"
+                android:text="20 tahun"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/rounded_background_data"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                 />
+
+            <TextView
+                android:id="@+id/tinggi"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/Nama"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/quotes"
+                android:layout_toEndOf="@+id/umur"
+                android:background="@drawable/rounded_background_data"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="6dp"
+                android:text="171 cm"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/berat"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tinggi"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="18dp"
+                android:layout_toStartOf="@+id/quotes"
+                android:layout_toEndOf="@+id/gender"
+                android:background="@drawable/rounded_background_data"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="6dp"
+                android:text="60 kg"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/umur"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="18dp"
+                android:padding="6dp"
+                android:text="Laki Laki"
+                android:textColor="@color/white"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/rounded_background_data"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/Health"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Nama"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="-26dp"
+                android:layout_marginEnd="182dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toEndOf="@+id/Nama"
+                android:background="@drawable/rounded_background_questions"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="4dp"
+                android:text="Healthy"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:queryHint="Cari Makanan"
+        app:iconifiedByDefault="false"
+        android:background="@drawable/search_view_bg"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        app:labelVisibilityMode="labeled"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:menu="@menu/bottom_nav_menu"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

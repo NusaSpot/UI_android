@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         val otp : TextView = findViewById(R.id.cirLoginButton)
 
         tv_register.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, RiwayatActivity::class.java)
             startActivity(intent)
         }
         reset_page.setOnClickListener {
@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
         otp.setOnClickListener {
-            val intent = Intent(this,LoadingQuestionActivity::class.java)
+            val intent = Intent(this,HealthyActivity::class.java)
             startActivity(intent)
         }
     }
